@@ -1,1 +1,6 @@
 temp.md
+
+# IDE
+CMakeLists.txt
+.idea/
+cmake-build-debug/
