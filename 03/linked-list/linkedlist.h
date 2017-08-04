@@ -32,4 +32,6 @@ void clearList(List *pList);
 
 int getListLength(List *pList);
 
+void displayList(List *pList);
+
 #endif //LINKED_LIST_LINKEDLIST_H
