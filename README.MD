@@ -16,7 +16,7 @@ C로 만드는 자료구조와 적용 알고리즘 해설서. 이론과 개념�
 
 1. [자료구조의 정의 및 분류](https://baofree.blogspot.kr/2017/08/blog-post.html)
 2. [추상 자료형](https://baofree.blogspot.kr/2017/08/adt.html)
-3. 알고리즘
+3. [알고리즘](https://baofree.blogspot.kr/2017/08/blog-post_45.html)
 
 ### 2장 C 프로그래밍 기법
 
