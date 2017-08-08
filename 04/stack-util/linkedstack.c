@@ -59,6 +59,4 @@ void deleteStack(Stack *pStack){
         }
     }
     free(pStack);
-
-
 }

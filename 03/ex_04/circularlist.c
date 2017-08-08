@@ -24,10 +24,10 @@ int addElement(List *pList, int position, ListNode node) {
     *pNewNode = node;
     pNewNode->pLink = NULL;
     if (position == 0) {
-        if (getListLength(pList) == 0){
+        if (getListLength(pList) == 0) {
             pList->headerNode.pLink = pNewNode;
             pNewNode->pLink = pNewNode;
-        } else{
+        } else {
             pPreNode = &(pList->headerNode);
             for (int i = 0; i < getListLength(pList); i++) {
                 pPreNode = pPreNode->pLink;
@@ -61,7 +61,7 @@ int removeElement(List *pList, int position) {
     pDelNode = pPreNode->pLink;
     pPreNode->pLink = pDelNode->pLink;
     pList->currentElementCount--;
-    if (position == 0){
+    if (position == 0) {
         pPreNode = &(pList->headerNode);
         for (int i = 0; i < getListLength(pList); i++) {
             pPreNode = pPreNode->pLink;
