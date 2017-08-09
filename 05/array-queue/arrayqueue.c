@@ -63,7 +63,7 @@ void deleteQueue(Queue *pQueue){
 
 int isQueueFull(Queue *pQueue){
     if (pQueue == NULL) return FALSE;
-    if (pQueue->maxElementCount == pQueue->currentElementCount) return TRUE;
+    if (pQueue->maxElementCount == pQueue->currentElementCount || pQueue->rear == pQueue->maxElementCount - 1) return TRUE;
     return FALSE;
 }
 
