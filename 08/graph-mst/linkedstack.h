@@ -28,7 +28,7 @@ StackNode *peek(Stack *pStack);
 
 int isStackEmpty(Stack *pStack);
 
-void deletetStack(Stack *pStack);
+void deleteStack(Stack *pStack);
 
 
 #endif //GRAPH_MST_LINKEDSTACK_H

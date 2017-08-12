@@ -50,7 +50,7 @@ int isStackEmpty(Stack *pStack) {
     return FALSE;
 }
 
-void deletetStack(Stack *pStack) {
+void deleteStack(Stack *pStack) {
     StackNode *pNode = NULL;
     if (pStack == NULL) return;
     while (isStackEmpty(pStack) == FALSE) {

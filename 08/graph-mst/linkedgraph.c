@@ -54,7 +54,7 @@ Graph *createDirectedGraph(int maxVertexCount) {
 int addVertex(Graph *pGraph, int vertexID) {
     if (pGraph == NULL) return FAIL;
     if (checkVertexValid(pGraph, vertexID) == TRUE) return FAIL;
-    pGraph->ppEdge[vertexID] = USED;
+    pGraph->pVertex[vertexID] = USED;
     pGraph->currentVertexCount++;
     return SUCCESS;
 }
@@ -89,13 +89,13 @@ int addEdgeWithWeight(Graph *pGraph, int fromVertexID, int toVertexID, int weigh
     toVertex.vertexID = toVertexID;
     toVertex.weight = weight;
     addElementForVertex(pGraph->ppEdge[fromVertexID], toVertex);
-    pGraph->currentVertexCount++;
+    pGraph->currentEdgeCount++;
     if (pGraph->graphType == GRAPH_UNDIRECTED) {
         GraphNode fromVertex = {0,};
-        fromVertex.vertexID = toVertexID;
+        fromVertex.vertexID = fromVertexID;
         fromVertex.weight = weight;
         addElementForVertex(pGraph->ppEdge[toVertexID], fromVertex);
-        pGraph->currentVertexCount++;
+        pGraph->currentEdgeCount++;
     }
     return SUCCESS;
 }
@@ -136,8 +136,8 @@ int findGraphNodePosition(List *pList, int vertexID){
         if (pNode->data.vertexID == vertexID){
             return position;
         }
-        position++;
         pNode = pNode->pLink;
+        position++;
     }
     return ret;
 }
@@ -160,11 +160,11 @@ void displayGraph(Graph *pGraph){
     for (i = 0; i < pGraph->maxVertexCount; i++){
         for (j = 0; j < pGraph->maxVertexCount; j++){
             position = findGraphNodePosition(pGraph->ppEdge[i], j);
-            if (position > 0){
+            if (position >= 0){
                 pNode = getElement(pGraph->ppEdge[i], position);
                 printf("%d ", pNode->data.weight);
             }else{
-                printf(" ");
+                printf("0 ");
             }
         };
         printf("\n");
