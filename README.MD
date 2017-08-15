@@ -42,6 +42,10 @@ C로 만드는 자료구조와 적용 알고리즘 해설서. 이론과 개념�
 
 1. [그래프 추상 자료형](08/)
 
+### 9장 정렬
+
+1. [정렬 알고리즘](09/)
+
 ## 참고
 
 - [강의](https://www.youtube.com/playlist?list=PL7mmuO705dG12pP82RPUR3wdD5dbYu9gZ)
